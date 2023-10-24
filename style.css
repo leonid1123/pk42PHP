@@ -1,0 +1,11 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+input{
+    font-size: large;
+    margin-bottom: 5px;
+}
