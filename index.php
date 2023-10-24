@@ -12,7 +12,7 @@ if ($mysqli === false) {
     die("ERROR: Could not connect. " . $mysqli->connect_error);
     $connState = "все плохо";
 } else {
-    $connState = "все хорошо";
+    $connState = "всё хорошо";
 }
 ?>
 
@@ -37,8 +37,7 @@ if ($mysqli === false) {
     </form>
     <p>
         <?php
-        if (isset($_POST["go"])) 
-        {
+        if (isset($_POST["go"])) {           
             echo $_POST["loginInput"] . " " . $_POST["passInput"];
             $sqlReq = "SELECT * FROM users WHERE login='" . $_POST["loginInput"] . "'";
             $result = $mysqli->query($sqlReq);
