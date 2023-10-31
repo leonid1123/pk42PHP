@@ -39,7 +39,7 @@ if ($mysqli === false) {
         <?php
         if (isset($_POST["go"])) {           
             echo $_POST["loginInput"] . " " . $_POST["passInput"];
-            $sqlReq = "SELECT * FROM users WHERE login='" . $_POST["loginInput"] . "'";
+            $sqlReq = "SELECT * FROM users WHERE login='" . $_POST["loginInput"] . "' AND password='".$_POST["passInput"]."';";
             $result = $mysqli->query($sqlReq);
             echo " " . $result->num_rows;
         }
